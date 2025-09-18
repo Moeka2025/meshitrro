@@ -25,6 +25,10 @@ class PostImagesController < ApplicationController
     redirect_to post_images_path
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   private
 
   def post_image_params
